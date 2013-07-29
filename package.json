@@ -1,0 +1,20 @@
+{
+  "name": "jroad",
+  "description": "A middleware framework for node",
+  "version": "0.0.3",
+  "author": "Dang Duy Thanh <thanhdd.it@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nodeontrain/jroad"
+  },
+  "main": "./lib/jroad.js",
+  "readmeFilename": "README.md",
+  "gitHead": "7890dd293a7c1dff4c3c2f7b9c136f32378344ac",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": [{
+      "type" : "GPL v3",
+      "url" : "http://www.gnu.org/licenses/gpl.html"
+  }]
+}
