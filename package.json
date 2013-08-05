@@ -7,11 +7,15 @@
     "type": "git",
     "url": "git://github.com/nodeontrain/jroad"
   },
+  "devDependencies": {
+    "mocha": "*",
+    "jspec": "*"
+  },
   "main": "./lib/jroad.js",
   "readmeFilename": "README.md",
   "gitHead": "7890dd293a7c1dff4c3c2f7b9c136f32378344ac",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./bin/test.sh"
   },
   "license": [{
       "type" : "GPL v3",
