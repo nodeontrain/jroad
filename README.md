@@ -9,11 +9,9 @@ A middleware framework for node
 
 ## Running Tests
 Before you run tests, you may need to first install mocha module and jspec module.
-<pre><code>
-	sudo npm install -g mocha
+<pre><code>    sudo npm install -g mocha
 	npm install jspec
 </code></pre>
 To run the tests:
-<pre><code>
-	npm test
+<pre><code>    npm test
 </code></pre>
