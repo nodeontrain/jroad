@@ -2,14 +2,14 @@
 A middleware framework for node
 
 ## Install Jroad
-npm install jroad
+		npm install jroad
 
 ## Update Jroad
-npm update jroad
+		npm update jroad
 
 ## Running Tests
-Before you run tests, you may need to first install mocha module and jspec module.  
+1. Before you run tests, you may need to first install mocha module and jspec module.
 		sudo npm install -g mocha
 		npm install jspec
-To run the tests:  
+2. To run the tests:
 		npm test
