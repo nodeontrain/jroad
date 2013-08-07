@@ -13,7 +13,6 @@ http.createServer(function (req, res) {
 			var favicon_path = jroad.favicon(root_app);
 			obj.favicon_path = favicon_path;
 		}
-	
 		res.writeHead(200, {'Content-Type': 'application/json'});
 		res.end(JSON.stringify(obj));
 	});

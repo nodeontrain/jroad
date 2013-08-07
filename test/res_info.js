@@ -98,3 +98,69 @@ it("Get png image", function(done) {
 		done();
 	})
 })
+
+it("POST method", function(done) {
+	var data = {user: "dang", email: "dang@gmail.com"};
+	jspec.post("/post", data, function(content) {
+		var jroad_info = {
+			"req_parser": {
+				"data_type": "view",
+				"controller_url": "/post",
+				"post_data": JSON.parse('{"user": "dang", "email": "dang@gmail.com"}'),
+				"method": "POST",
+				"content_type": "text/html"
+			}
+		};
+		jspec.object_equals(content, JSON.stringify(jroad_info));
+		done();
+	})
+})
+
+it("DELETE method", function(done) {
+	var data = {user: "dang", email: "dang@gmail.com", _method: "delete"};
+	jspec.post("/delete", data, function(content) {
+		var jroad_info = {
+			"req_parser": {
+				"data_type": "view",
+				"controller_url": "/delete",
+				"_method": "delete",
+				"method": "DELETE",
+				"content_type": "text/html"
+			}
+		};
+		jspec.object_equals(content, JSON.stringify(jroad_info));
+		done();
+	})
+})
+
+it("PUT method", function(done) {
+	var data = {user: "dang", email: "dang@gmail.com", _method: "put"};
+	jspec.post("/put", data, function(content) {
+		var jroad_info = {
+			"req_parser": {
+				"data_type": "view",
+				"controller_url": "/put",
+				"post_data": JSON.parse('{"user": "dang", "email": "dang@gmail.com", "_method": "put"}'),
+				"method": "PUT",
+				"content_type": "text/html"
+			}
+		};
+		jspec.object_equals(content, JSON.stringify(jroad_info));
+		done();
+	})
+})
+
+it("GET method", function(done) {
+	jspec.visit("/get", function(content) {
+		var jroad_info = {
+			"req_parser": {
+				"data_type": "view",
+				"controller_url": "/get",
+				"method": "GET",
+				"content_type": "text/html"
+			}
+		};
+		jspec.object_equals(content, JSON.stringify(jroad_info));
+		done();
+	})
+})
