@@ -1,17 +1,25 @@
 # Jroad
 A middleware framework for node
+[![NPM](https://nodei.co/npm/jroad.png)](https://nodei.co/npm/jroad/)
 
 ## Install Jroad
-		npm install jroad
+```shell
+npm install jroad
+```
 
 ## Update Jroad
-		npm update jroad
+```shell
+npm update jroad
+```
 
 ## Running Tests
 Before you run tests, you may need to first install mocha module and jspec module.
-<pre><code>    sudo npm install -g mocha
-	npm install jspec
-</code></pre>
+```shell
+sudo npm install -g mocha
+npm install jspec
+```
+
 To run the tests:
-<pre><code>    npm test
-</code></pre>
+```shell
+npm test
+```
