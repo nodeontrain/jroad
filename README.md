@@ -1,5 +1,5 @@
 # Jroad
-A middleware framework for node
+A middleware framework for node  
 [![NPM](https://nodei.co/npm/jroad.png)](https://nodei.co/npm/jroad/)
 
 ## Install Jroad
