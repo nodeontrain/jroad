@@ -106,7 +106,7 @@ it("POST method", function(done) {
 			"req_parser": {
 				"data_type": "view",
 				"controller_url": "/post",
-				"post_data": JSON.parse('{"user": "dang", "email": "dang@gmail.com"}'),
+				"data": JSON.parse('{"user": "dang", "email": "dang@gmail.com"}'),
 				"method": "POST",
 				"content_type": "text/html"
 			}
@@ -140,7 +140,7 @@ it("PUT method", function(done) {
 			"req_parser": {
 				"data_type": "view",
 				"controller_url": "/put",
-				"post_data": JSON.parse('{"user": "dang", "email": "dang@gmail.com", "_method": "put"}'),
+				"data": JSON.parse('{"user": "dang", "email": "dang@gmail.com", "_method": "put"}'),
 				"method": "PUT",
 				"content_type": "text/html"
 			}
