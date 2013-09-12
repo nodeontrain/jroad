@@ -16,21 +16,6 @@ it("Get favicon.ico", function(done) {
 	})
 })
 
-it("Root path", function(done) {
-	jspec.visit("/", function(content) {
-		var jroad_info = {
-			"req_parser": {
-				"data_type": "view",
-				"controller": "root",
-				"method": "GET",
-				"content_type": "text/html"
-			}
-		};
-		jspec.object_equals(content, JSON.stringify(jroad_info));
-		done();
-	})
-})
-
 it("Get javascript file", function(done) {
 	jspec.visit("/application.js", function(content) {
 		var jroad_info = {
@@ -105,10 +90,27 @@ it("POST method", function(done) {
 		var jroad_info = {
 			"req_parser": {
 				"data_type": "view",
-				"controller_url": "/post",
+				"url_path": "/post",
 				"data": JSON.parse('{"user": "dang", "email": "dang@gmail.com"}'),
 				"method": "POST",
 				"content_type": "text/html"
+			}
+		};
+		jspec.object_equals(content, JSON.stringify(jroad_info));
+		done();
+	})
+})
+
+it("JSON POST method", function(done) {
+	var data = {user: "dang", email: "dang@gmail.com"};
+	jspec.post("/post.json", data, function(content) {
+		var jroad_info = {
+			"req_parser": {
+				"data_type": "view",
+				"url_path": "/post",
+				"data": JSON.parse('{"user": "dang", "email": "dang@gmail.com"}'),
+				"method": "POST",
+				"content_type": "application/json"
 			}
 		};
 		jspec.object_equals(content, JSON.stringify(jroad_info));
@@ -122,7 +124,7 @@ it("DELETE method", function(done) {
 		var jroad_info = {
 			"req_parser": {
 				"data_type": "view",
-				"controller_url": "/delete",
+				"url_path": "/delete",
 				"_method": "delete",
 				"method": "DELETE",
 				"content_type": "text/html"
@@ -135,14 +137,14 @@ it("DELETE method", function(done) {
 
 it("PUT method", function(done) {
 	var data = {user: "dang", email: "dang@gmail.com", _method: "put"};
-	jspec.post("/put", data, function(content) {
+	jspec.post("/users/25432453245.json", data, function(content) {
 		var jroad_info = {
 			"req_parser": {
 				"data_type": "view",
-				"controller_url": "/put",
+				"url_path": "/users/25432453245",
 				"data": JSON.parse('{"user": "dang", "email": "dang@gmail.com", "_method": "put"}'),
 				"method": "PUT",
-				"content_type": "text/html"
+				"content_type": "application/json"
 			}
 		};
 		jspec.object_equals(content, JSON.stringify(jroad_info));
@@ -155,7 +157,7 @@ it("GET method", function(done) {
 		var jroad_info = {
 			"req_parser": {
 				"data_type": "view",
-				"controller_url": "/get",
+				"url_path": "/get",
 				"method": "GET",
 				"content_type": "text/html"
 			}
