@@ -1,7 +1,7 @@
 {
   "name": "jroad",
   "description": "A middleware framework for node",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "author": "Dang Duy Thanh <thanhdd.it@gmail.com>",
   "repository": {
     "type": "git",
